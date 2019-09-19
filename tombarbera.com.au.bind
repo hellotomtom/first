@@ -1,0 +1,27 @@
+; Luadns.com has native support for Bind zone files
+; File: example.org.bind
+; Zone: example.org
+
+; Default origin is computed from the file name,
+; you may change the origin with $ORIGIN directive
+; Example:
+; $ORIGIN example.org.
+
+; Default TTL is account's [default TTL](https://api.luadns.com/users/edit),
+; you may change the default TTL with $TTL directive
+; Example:
+; $TTL 3600             ; 1 hour
+
+; The system will generate and maintain domain's SOA record automatically,
+; SOA records found in *.bind files are simply ignored
+
+
+; Domain NS records are replaced with system name servers
+ 
+
+; The rest of records
+@                       A       210.49.221.95
+www                     A       210.49.221.95
+sonarr                  A       210.49.221.95
+radarr                  A       210.49.221.95
+nextcloud               A       210.49.221.95
